@@ -1,0 +1,13 @@
+﻿@model UzbekAcademy_of_IT.Models.meetingsave
+@using (Html.BeginForm("admin", "Admin", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.fan_nomi, "Fan nomi:")
+        @Html.DropDownListFor(m => m.fan_nomi, Model.Fanlar, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.link_nomi, "Link nomi:")
+        @Html.TextBoxFor(m => m.link_nomi, new { @class = "form-control" })
+    </div>
+    <button type="submit" class="btn btn-primary">Saqlash</button>
+}

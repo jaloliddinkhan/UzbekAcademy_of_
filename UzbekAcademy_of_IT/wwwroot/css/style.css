@@ -1,0 +1,132 @@
+﻿/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Navigation Styles */
+nav {
+    text-align: center;
+    margin-top: 20px;
+}
+
+    nav ul {
+        list-style-type: none;
+    }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+            nav ul li a {
+                color: #fff;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.3s ease;
+            }
+
+                nav ul li a:hover {
+                    color: #ffd700;
+                }
+
+/* Main Content Styles */
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #495057;
+    color: #fff;
+    padding: 20px;
+}
+
+    .sidebar h2 {
+        color: #fff;
+    }
+
+.content {
+    flex: 3;
+    padding: 20px;
+}
+
+    .content h1 {
+        margin-bottom: 20px;
+    }
+
+/* Table Styles */
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #343a40;
+    color: #fff;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .sidebar, .content {
+        width: 100%;
+    }
+}
+
+code {
+    display: block;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f1f1f1;
+    border-left: 5px solid #4CAF50; /* Green border-left */
+    font-family: monospace;
+}

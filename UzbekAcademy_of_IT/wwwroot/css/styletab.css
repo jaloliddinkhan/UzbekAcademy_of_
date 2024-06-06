@@ -1,0 +1,26 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-radius: 10px;
+}
+
+th, td {
+    border-style: dotted;
+    border-color: blue;
+}
+
+th, td {
+    padding: 15px;
+}
+
+table {
+    border-spacing: 30px;
+}
+
+tr:nth-child(even) {
+    background-color: brown;
+}
+
+th:nth-child(even), td:nth-child(even) {
+    background-color: brown;
+}

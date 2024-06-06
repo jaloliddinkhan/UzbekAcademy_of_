@@ -1,0 +1,142 @@
+﻿.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 90%;
+}
+
+.section {
+    width: 45%;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+    .section:hover {
+        transform: translateY(-5px);
+    }
+
+    .section img {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+        max-height: 300px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+
+.description {
+    font-size: 16px;
+    color: #333;
+}
+
+@keyframes backgroundChange {
+    0% {
+        background-color: #ff9999;
+    }
+
+    25% {
+        background-color: #99ff99;
+    }
+
+    50% {
+        background-color: #9999ff;
+    }
+
+    75% {
+        background-color: #ffff99;
+    }
+
+    100% {
+        background-color: #ff9999;
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: #333;
+    }
+
+    25% {
+        color: #ff3333;
+    }
+
+    50% {
+        color: #33ff33;
+    }
+
+    75% {
+        color: #3333ff;
+    }
+
+    100% {
+        color: #333;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: backgroundChange 10s infinite;
+    transition: background-color 1s;
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    color: #333;
+}
+
+th {
+    background-color: #f2f2f2;
+    border-bottom: 2px solid #ddd;
+}
+
+td img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+    td img:hover {
+        transform: scale(1.05);
+    }
+
+button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.description {
+    margin-top: 10px;
+    font-size: 16px;
+    animation: colorChange 5s infinite;
+}

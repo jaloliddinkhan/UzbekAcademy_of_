@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C# dasturlash tilini o'rganish uchun sizga kerakli bo'limlar</title>
+    <link rel="stylesheet" href="~/css/ITstyle.css">
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+            <a href="@Url.Action("Kirish", "cs", new { section = "web" })">
+                <img src="~/rasm/programming.jpg" alt="Dasturlashga doir elektron darsliklar" />
+                <div class="description">Dasturlashga doir elektron darsliklar</div>
+            </a>
+        </div>
+        <div class="section">
+            <a href="@Url.Action("Index", "ITroyxat", new { section = "web" })">
+                <img src="~/rasm/video_dars.jpg" alt="Video darslar" />
+                <div class="description">Video darslar</div>
+            </a>
+        </div>
+        <div class="section">
+            <a href="@Url.Action("JoinMeeting", "cs")">
+                <img src="~/rasm/meeting.jpg" alt="Online Dars" />
+                <div class="description">Online Dars</div>
+            </a>
+        </div>
+        <div class="section">
+            <a href="@Url.Action("books", "ITroyxat", new { section = "web" })">
+                <img src="~/rasm/kitoblar.png" alt="Kitoblar" />
+                <div class="description">Kitoblar</div>
+            </a>
+        </div>
+    </div>
+    <script src="~/js/script.js"></script>
+</body>
+</html>

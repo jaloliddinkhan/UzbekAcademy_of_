@@ -1,0 +1,6 @@
+|Xushvaqtov|,(Jaloliddin),[Gulmurod o'g'li],{shaxsiy ma'lumotlari}*jaloliddin$jalol222&dasturlash
+|Nasriddinov|,(Javohir),[Ismoiljon o'g'li],{shaxsiy ma'lumotlari}*javohir$javohir3245&fizika
+|Yusupov|,(Jasurbek),[Jo'ra o'g'li],{shaxsiy ma'lumotlari}*jasurbek$jasur0807&matematika
+|Jo'rayev|,(Nurali),[Shavkat o'g'li],{shaxsiy ma'lumotlari}*nurali$nurali9717&biologiya
+|Boboxonov|,(Sirojiddin),[Shavkat o'g'li],{shaxsiy ma'lumotlari}*jalol$jalol2&dasturlash
+|O'tamova|,(Gulyora),[Shavkatovna],{shaxsiy ma'lumotlari}*gulyora$gulyora1113&kimyo

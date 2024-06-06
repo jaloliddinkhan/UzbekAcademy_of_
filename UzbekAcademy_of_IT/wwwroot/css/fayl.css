@@ -1,0 +1,153 @@
+#fon2{
+    background-image: url();
+  }
+  #fon{
+  margin:auto;
+  width:1182px;
+  height:1810px;
+  border:0px solid blue;
+  
+  }
+  #header{
+  border-top-left-radius: 20px;
+  border-top-right-radius:20px; 
+  width:100%;
+  height:150px;
+  border: 1px solid red;
+  padding:5px;
+  background-color: turquoise;
+  background-image: url("127.jpg");
+  }
+  #head1{
+  width:100%;
+  height:45px;
+  border: 1px solid red;
+  padding:0px;
+  z-index: 10;
+  
+  }
+  #menu{
+  width:200px;
+  height:1420px;
+  border: 1px solid red;
+  padding:5px;
+  float:left;
+  background-color: greenyellow;
+  z-index: 1;
+  }
+  #menu2{
+  float: right;
+  width:247px;
+  height:1428px;
+  border: 1px solid red;
+  padding:1px;
+  background-color: greenyellow;
+  }
+  #content
+    {
+  margin-left:211px;
+  width:707px;
+  height:1420px;
+  border: 1px solid red;
+  padding:5px;
+  overflow-y: auto;
+  background-color: rgba(115, 232, 214, 0.578);
+  }
+  #footer{
+  
+    margin-bottom: 5px;
+  width:1180px;
+  height:165px;
+  border: 1px solid red;
+  }
+  
+  h2{
+    font-family: fantasy;
+    color:black;
+    font-size: 15px; 
+  }
+  
+  
+  
+  .text-shadow-2 {
+  font-size:60px;
+   margin-bottom: 10px;
+    color: red;
+    text-shadow: -1px -1px white; 
+  }
+  .new1{
+    font-size: 25px;
+    font-style: italic;
+    font-family: sans-serif;
+    overflow: hidden;
+  }
+  
+  
+  
+  
+  ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color:green;
+  }
+  
+  li {
+      float: left;
+  }
+  
+  li a {
+      display: inline-block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+  }
+  
+  li a:hover, .dropdown:hover .dropbtn {
+      background-color: red;
+      color:white;
+  }
+  li a:active{
+    
+    color:green;
+  }
+  
+  
+  
+  
+  
+  
+  
+  p {
+      text-indent: 20px;
+  }
+  
+  
+  #footer{
+  float:inline-end;
+    margin-bottom: 5px;
+  width:1180px;
+  height:165px;
+  background-color: turquoise;
+  border: 1px solid red;
+  }
+  
+  
+  .new4{
+    border-radius: 15px;
+  
+  }
+  .new6{
+    margin-top: 1px;
+    font-size: 16px;
+    font-style: italic;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  .myclass{
+    color: blue;
+    font-family: 'Times New Roman';
+  }

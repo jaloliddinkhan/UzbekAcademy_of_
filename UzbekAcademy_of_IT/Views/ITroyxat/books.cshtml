@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+            width: 300px;
+            text-align: center;
+            padding: 20px;
+        }
+
+            .card:hover {
+                transform: translateY(-10px);
+            }
+
+            .card h3 {
+                color: #333;
+                font-size: 18px;
+                margin: 0;
+            }
+
+            .card a {
+                text-decoration: none;
+                color: inherit;
+            }
+    </style>
+</head>
+<body>
+    <h1>Kitoblarni Yuklab Olish</h1>
+    <div class="card-container">
+        <div class="card">
+            <a href="https://alek772.github.io/Books/Professional%20ASP.NET%20MVC%205.pdf">
+                <h3>
+                    Jon Galloway, Brad Wilson, K. Scott Allen, David Matson "PROFESSIONAL ASP.NET MVC 5"
+                </h3>
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://theswissbay.ch/pdf/Gentoomen%20Library/Programming/CSharp/Pro%20ASP.NET%20MVC%202%20Framework.pdf">
+                <h3>Steven Sanderson  "Pro ASP.NET MVC 2 Framework"</h3>
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://codelibs.ru/media/books/Jamro__Marcin_-_C_Data_Structures_and_Algorithms_2nd_Edition_-_2024.pdf">
+                <h3>Marcin Jamro "C# Data Structures and Algorithms"</h3>
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://codelibs.ru/media/books/%D0%A0%D1%8B%D0%B1%D0%B0%D0%BD%D0%BE%D0%B2_%D0%90.%D0%90._-_%D0%9F%D0%B0%D1%82%D1%82%D0%B5%D1%80%D0%BD%D1%8B_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F_%D0%BD%D0%B0_C_-_2023.pdf ">
+                <h3>
+                    Рыбанов А.А. "ПАТТЕРНЫ ПРОЕКТИРОВАНИЯ НА С#"
+                </h3>
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://codelibs.ru/media/books/Michaelis_Mark_-_Essential_C_12.0_8th_Edition_-_2024.pdf">
+                <h3>Mark Michaelis "Essential C# 12.0"</h3>
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://codelibs.ru/media/books/%D0%A2%D1%8E%D0%BA%D0%B0%D1%87%D0%B5%D0%B2_%D0%9D.%D0%90.-_C_._%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_2D_%D0%B8_3D_%D0%B2%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D0%BD%D0%BE%D0%B9_%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B8_4-%D0%B5_%D0%B8%D0%B7%D0%B4._-_2020.pdf">
+                <h3>Н. А. ТЮКАЧЕВ,  В. Г. ХЛЕБОСТРОЕВ "C#. ПРОГРАММИРОВАНИЕ 2D И 3D ВЕКТОРНОЙ ГРАФИКИ"</h3>
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://codelibs.ru/media/books/Price_M._J._-_C_12_and_.NET_8_8th_Edition_Expert_insight_-_2023.pdf">
+                <h3>Mark J. Price "C# 12 and .NET 8 – Modern Cross-Platform Development Fundamentals"</h3>
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://codelibs.ru/media/books/%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D1%8C%D0%B5%D0%B2_%D0%90._-_%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%BD%D0%B0_C_%D0%B4%D0%BB%D1%8F_%D0%BD%D0%B0%D1%87%D0%B8%D0%BD%D0%B0%D1%8E%D1%89%D0%B8%D1%85_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D1%8B%D0%B9_%D0%B1%D0%B5%D1%81%D1%82%D1%81%D0%B5%D0%BB_AiD0Skw.pdf">
+                <h3>Васильев А.Н. "Программирование на C# для начинающих. Основные сведения"</h3>
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://codelibs.ru/media/books/%D0%A2%D1%8E%D0%BA%D0%B0%D1%87%D0%B5%D0%B2_%D0%9D._%D0%A5%D0%BB%D0%B5%D0%B1%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%B2_%D0%92._-__C._%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%8B_%D0%B8_%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D1%8B_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85_-_2021.pdf">
+                <h3>Тюкачев Н., Хлебостроев В. "C#. Алгоритмы и структуры данных"</h3>
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://codelibs.ru/media/books/Code_like_a_Pro_in_C.pdf">
+                <h3>Jort Rodenburg "Code like a Pro in C#"</h3>
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://codelibs.ru/media/books/C_%D0%B4%D0%BB%D1%8F_%D1%87%D0%B0%D0%B9%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2.pdf">
+                <h3>Джон Пол Мюллер "C# для чайников"</h3>
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://codelibs.ru/media/books/C_7_%D0%B8_.NET_Core._%D0%9A%D1%80%D0%BE%D1%81%D1%81-%D0%BF%D0%BB%D0%B0%D1%82%D1%84%D0%BE%D1%80%D0%BC%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F_%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0_%D0%B4%D0%BB%D1%8F_%D0%BF%D1%80%D0%BE%D1%84%D0%B5%D1%81%D1%81%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D0%BE%D0%B2.pdf">
+                <h3>Марк Дж. Прайс "C# 7 и .NET Core. Кросс-платформенная разработка для профессионалов"</h3>
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://codelibs.ru/media/books/C_and_XML_Primer.pdf">
+                <h3>Jonathan Hartwell "C# and XML Primer"</h3>
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://codelibs.ru/media/books/Beginning_XML_with_C_7.pdf">
+                <h3>Bipin Joshi "Beginning XML with C# 7"</h3>
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://codelibs.ru/media/books/%D0%9F%D0%B0%D1%82%D1%82%D0%B5%D1%80%D0%BD%D1%8B_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F_%D0%B4%D0%BB%D1%8F_C_%D0%B8_%D0%BF%D0%BB%D0%B0%D1%82%D1%84%D0%BE%D1%80%D0%BC%D1%8B_.NET_Core.pdf">
+                <h3>Арораа Г., Чилберто Дж. "Паттерны проектирования для C# и платформы .NET Core"</h3>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

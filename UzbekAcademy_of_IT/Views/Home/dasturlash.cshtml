@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Sahifa</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/cscpppy.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-3">
+        <div class="container">
+            <h1 class="display-4">Mening Web Sahifam</h1>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container d-flex justify-content-around">
+            <a href="@Url.Action("Index", "cs", new { section = "C#" })">
+                <img src="~/rasm/csharp.jpg" alt="C#" class="img-thumbnail" style="width:280px; height:280px">
+            </a>
+            <a href="@Url.Action("Index", "py", new { section = "py" })">
+                <img src="~/rasm/python.png" alt="Python" class="img-thumbnail" style="width:280px; height:280px">
+            </a>
+            <a href="@Url.Action("Index", "cpp", new { section = "cpp" })">
+                <img src="~/rasm/cplusplus.png" alt="C++" class="img-thumbnail" style="width:280px; height:280px">
+            </a>
+            <a href="@Url.Action("", "py")">
+                <img src="~/rasm/web.jpg" alt="Web" class="img-thumbnail" style="width:280px; height:280px">
+            </a>
+        </div>
+    </nav>
+    <main class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center">Kirish</h2>
+                <p class="lead text-center">Bu yerda siz turli bo'limlarga kirishingiz mumkin.</p>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Mening Web Sahifam. Barcha huquqlar himoyalangan.</p>
+            <p><a href="https://www.example.com" class="text-white">Aloqa</a> | <a href="https://www.example.com" class="text-white">Maxfiylik siyosati</a></p>
+        </div>
+    </footer>
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

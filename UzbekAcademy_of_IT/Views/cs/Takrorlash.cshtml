@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <link href="~/css/style.css" type="text/css" rel="stylesheet" />
+    </head>
+<body>
+    <table style="width: 100%">
+        <tr>
+            <th colspan="2" style="font-family:'Times New Roman'">
+                <h1><p>5-§. Takrorlash operatorlari</p></h1>
+            </th>
+        </tr>
+        <tr>
+            <td style="width:30%; vertical-align: top; padding: 10px;">
+                <div>
+                    @Html.Partial("Menu")
+                </div>
+            </td>
+            <td style="font-family:'Times New Roman'">
+                Goto takrorlash operatori. Goto operatori boshqa barcha takrorlash operatorlari uchun asosiy mezon bo’lib xizmat qiladi. Lekin shu bilan birgalikda unda juda ko’p o’tishlar amalga oshiriladi va buning natijasida dastur chalkashliklarga yo’l qo’yadi. Dasturchilar odatda undan foydalanishni tafsiya qilmaydi, ammo C# tilini chuqur o’rganish uchun bu operator haqida qisqacha aytib o’tamiz:<br />
+                goto operatori ishlash uchun bir belgi (manzil) yaratiladi va ushbu belgiga qaytish amalga oshiriladi.<br />
+                Misol sifatida 1+2+3+...+n ni hisoblaydigan dastur tuzaylik.<br />
+                int n , i=0, sum=0;<br />
+                Console.Write("n=");<br />
+                n=int.Parse(Console.ReadLine());<br />
+                manzil:<br />
+                i++;<br />
+                sum += i;<br />
+                if(i< n) goto manzil;<br />
+                Console.WriteLine(sum);<br />
+                goto operatori nafaqat takrorlash balki o’tish operatori ham hisoblanadi.<br />
+                while takrorlash operatori<br />
+                Bu takrorlash operatorida true qiymat qaytarilsa ya’ni shart bajarilaversa ish davom etaveradi, ya’ni “yurak urishdan to’xtamasa yashayveradi”. while operatorining umumiy ko’rinishi quyidagicha:<br />
+                </>while(shart)<br />
+                {<br />
+                        //operator tanasi ya’ni bajariladigan amallar<br />
+                }<br />
+                Yuqoridagi misolni ya’ni 1+2+3+...+n ni while orqali hisoblaymiz<br />
+                Console.Write("n=");<br />
+                int n=int.Parse(Console.ReadLine());<br />
+                int sum=0, i=0;<br />
+                </>while (i < n)<br />
+                    {<br />
+                        i++;<br />
+                        sum += i;<br />
+                    }<br />
+                    Console.WriteLine(sum);<br />
+                    Bunda ham algoritm yuqorida ko’rib o’tganimiz goto bundan keyin ko’rib o’tadigan do-while va for barchasi bir xil ya’ni agarda shart bajarilsa true qiymatda bo’lsa amal bajarilaveradi. Hozirgi kodga qarasak i o’zgaruvchisi 0 dan boshlab har safar 1 ga oshib boraveradi (0,1,2,3...) va bu sum o’zgaruvchisiga qo’shilaveradi (0+1+2+3+...).<br />
+                    Hayotimizda ko’p uchratadigan bir misolni ko’rib o’tsak, ya’ni dasturimizda kod o’rnatilgan foydalanuvchiga 5 ta imkoniyat beramiz, agar 5 martada ham xato terilsa 30 soniya kutadi va yana 5 ta imkoniyat shunda ham xato tersa yana ma’lum bir vaqt kutsin va yana ma’lum muddat kutsin va yana 5 marta imkoniyat so’ngra dastur to’xtasin. Quyida while orqali ushbu dasturni ko’rib o’tamiz:<br />
+                    /*kodni xato tergan foydalanuvchi 3x5 jami 15 marta imkoniyat beriladi<br />
+                     faqat dastlabki 5 ta xatodan keyin 30 soniya<br />
+                    keyingi 5 ta xatodan keyin 300 soniya, oxirigi 5 tadan keyin esa dastur 2250 soniya<br />
+                    kutadi va ishdan to'xtaydi<br />
+                     */<br />
+                    //vaqt chegarasi bilan 3 marta imkoniyat berish uchun k sanagich<br />
+                    int k = 0;<br />
+                    //parol to'g'riligini tasdiqlash uchun ret o’zgaruvchisi<br />
+                    bool ret = false;<br />
+                    </>while (k < 3)<br />
+                    {<br />
+                        //5 marta imkoniyat berish uchun sanagich<br />
+                        int sanagich = 0;<br />
+                        //parol<br />
+                        string parol = "kamina0211";<br />
+                        </>while (sanagich < 5)<br />
+                        {<br />
+                            Console.Write("Parolni kiriting: ");<br />
+                            //kiritilayotgan parol<br />
+                            string kiritish = Console.ReadLine();<br />
+                            if (kiritish == parol)<br />
+                            {<br />
+                                /*agarda parol to'g'ri bo'lsa ret o'zgaruvchisi true qiymat qaytaradi va<br />
+                                 break orqali whiledan chiqiladi*/<br />
+                                ret = true;<br />
+                                break;<br />
+                            }<br />
+                            else<br />
+                            {<br />
+                                /*parol noto'g'ri bo'lsa sanagich qiymati 1 ga oshadi<br />
+                                 bu jarayon whiledagi shartga ko'ra 5 ga tenglashguncha takrorlanaveradi*/<br />
+                                sanagich++;<br />
+                                Console.WriteLine("Noto'g'ri parol. Qayta urinib ko'ring");<br />
+                            }<br />
+                        }<br />
+                        //Clear funksiyasi orqali Console oynadagi ma'lumotlar tozalanadi<br />
+                        Console.Clear();<br />
+                        //agarda ret true qiymat qabul qilsa ya'ni parol to'g'ri bo'lsa yangi amallar bajarishimiz mumkin<br />
+                        if (ret == true)<br />
+                        {<br />
+                            k = 3;<br />
+                            Console.WriteLine("parol to'g'ri!");<br />
+                        }<br />
+                        //sanagich 5 ga tenglashsa ya'ni 5 marta xato parol terilsa bajariladigan kod<br />
+                        if (sanagich == 5)<br />
+                        {<br />
+                            //har 5 marta parol xato terilsa belgilangan vaqt (k+1)*5^k*30 ko'rinishida o'zgarsin<br />
+                            int m = Convert.ToInt32(Math.Pow(5, k));<br />
+                            Console.Write("5 ta xato urinish {0} soniya kuting", (k + 1) * m * 30);<br />
+                            //DateTime sinfidan sanoq o'zgaruvchisi olinayapti<br />
+                            //unga DateTime.Now orqali hozirgi vaqt yuklanayapti<br />
+                            DateTime sanoq = DateTime.Now;<br />
+                            //(k+1)*5^k*30 soniya vaqt sanoq o'zgaruvchisiga qo'shilayapti<br />
+                            sanoq = sanoq.AddSeconds((k + 1) * m * 30);<br />
+
+                            </>while (DateTime.Now < sanoq)<br />
+                            {<br />
+                                //30 yoki 300 yoki 2250 soniya kutadi ya'ni (k+1)*5^k*30<br />
+                            }<br />
+                        }<br />
+                        //vaqt tugagandan keyin yana bir imkoniyat qadamini oshirish<br />
+                        k++;<br />
+                    }<br />
+                    Dasturni ketma-ketlikda tushunishga harakat qiling.<br />
+                    do-while operatori<br />
+                    while va do-while ning farqi nimada?<br />
+                    while va do-while operatorlarining orasidagi asosiy farq, shartni tekshirish tartibida.<br />
+                    •	while takrorlash operatori shartni tsikl boshida tekshiradi. Agar rost bo’lsa, tsikl bajariladi. Shart boshida yolg’iz tekshiriladi, shuning uchun agar shart to’g’ri  bo’lmasa, tsikl hech qachon bajarilmaydi.<br />
+                    •	do-while tsikli esa shartni tsikl bajarilgandan so’ng tekshiradi. Bu tsikl har doim kamida bir marta bajariladi. Shartni tsikl bajarilgandan so’ng tekshirib, agar shart to’g’ri bo’lsa, tsikl davom ettiriladi, aks holda to’xtaydi.<br />
+                    int x = 5;<br />
+                    //while operatori<br />
+                    </>while (x < 5)<br />
+                    {<br />
+                        Console.WriteLine("while {0}",x);<br />
+                        x++;<br />
+                    }<br />
+                    //do-while operatori<br />
+                    do<br />
+                    {<br />
+                        Console.WriteLine("do-while {0}",x);<br />
+                        x++;<br />
+                    } </>while (x < 5);<br />
+                    Bu misolda, while tsikli shart boshida tekshiriladi, shuning uchun “while 5” chiqmaydi, chunki shart rost emas. do-while tsikli esa bir marta bajariladi va shartni tekshiradi, shuning uchun “do-while 5” chiqadi, so’ng shart tekshiriladi va tsikl to’xtaydi.<br />
+                    for takrorlash operatori<br />
+                    Yuqorida ko’rib o’tilgan takrorlash operatorlarida i o’zgaruvchisi va uning boshlang’ich qiymati bo’lib tsikl aylanishi bilan i qadami ortadi yoki kamayadi (i++, i+=2, i--, i-=2 va hk.) va i gar shart qo’yiladi (i<n, i>n va hk.). for tsiklida ham ayni shunday<br />
+                    for([o’zgaruvchi e’lon qilish va boshlang’ich qiymat]; [shart]; [o’zgaruvchi qadami])<br />
+                    {<br />
+                        //tsikl tanasi<br />
+                    }<br />
+                    Yuqoridagi 1+2+3+...+n ni for tsikli orqali hisoblaylik<br />
+                    Console.Write("n=");<br />
+                    int n=Convert.ToInt32(Console.ReadLine());<br />
+                    int sum = 0;<br />
+                    for (int i = 0; i <= n; i++)<br />
+                    {<br />
+                        sum += i;<br />
+                    }<br />
+                    Console.WriteLine(sum);<br />
+                    Bu dasturda int i = 0; i <= n; i++ ga e’tibor bersak i=0 dan boshlanadi va i<=n ekanligi tekshiriladi va shart bajarilsa i++ qadamni 1 ga oshirib tsikl shart bajarilmay qolgunicha davom ettiriladi.<br />
+                    Break va continue<br />
+                    Dastur bajarilishida shunday holatlar bo’ladiki, dastur ishini to’xtashish yoki ma’lum qismini bajarmaslik zarur bo’lib qoladi. Bunday hollarda break va continue instruksiyalaridan foydalanish qulay. Agar sizga dastur ishini ma’lum paytda (holatda) to’xtatish, oxirigacha bajarmaslik zarur bo’lsa, u holda break dan foydalanish kerak buni yuqorida switch va while operatorlaridagi misollarda ko’rib o’tdik. Endi continue operatorini ko’rib o’tamiz<br />
+                    for (int i = 0;i<100;i++)<br />
+                    {<br />
+                        if (i % 2 == 0)<br />
+                            continue;<br />
+                        Console.WriteLine("{0}",i);<br />
+                    }<br />
+                    Bu misol ekranga barcha 100 gacha bo’lgan toq sonlarni chiqarib beradi. Agarda tekshirish paytida juft son kelib qolsa, u holda hech qanday amal bajarilmaydi va takrorlanish birta keyinga o’tkaziladi.
+
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

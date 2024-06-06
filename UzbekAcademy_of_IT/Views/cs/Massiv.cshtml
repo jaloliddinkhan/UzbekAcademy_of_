@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <link href="~/css/style.css" type="text/css" rel="stylesheet" />
+    </head>
+<body>
+    <table style="width: 100%">
+        <tr>
+            <th colspan="2" style="font-family:'Times New Roman'">
+                <h1><p>6-§. Massivlar bilan ishlash</p></h1>
+            </th>
+        </tr>
+        <tr>
+            <td style="width:30%; vertical-align: top; padding: 10px;">
+                <div>
+                    @Html.Partial("Menu")
+                </div>
+            </td>
+            <td style="font-family:'Times New Roman'">
+                Massiv- bu bir xil toifali, chekli qiymatlarning tartiblangan to’lamidir. Bunga misol sonlar to’plami, matritsalar va hk.lar.<br />
+                Massiv bir o’lchamli va ko’p o’lchamli bo’ladi. Agar uning elementiga bir indeks orqali murojaat qilish mumkin bo’lsa bir o’lchamli bo’ladi.<br />
+                Bir o’lchamli massivning e’lon qilinishi quyidagicha:<br />
+                <</>tur_nomi>[]<</>massiv_nomi>={boshlang’ich qiymatlar};<br />
+                        yoki<br />
+                        </><</>tur_nomi>[]<</>massiv_nomi>=new <</>tur_nomi>[elementlar_soni];<br />
+                                    Masalan:<br />
+                                    double[] massiv = { 1, 2, 3, 4 };<br />
+                                    double[] massiv = new double[4];<br />
+                                    double[] massiv = new double[] { 1, 2, 3, 4 };<br />
+                                    Ikki o’lchovli massiv e’lon qilinishi<br />
+                                    tur_nomi [massiv_satrlari_nomi, massiv_ustunlari_nomi]=new tur_nomi[massiv_satrlari_nomi, massiv_ustunlari_nomi];<br />
+                                    double[,] massiv = new double[4,3];<br />
+                                    Ko’p o’lchamli massiv<br />
+                                    tur_nomi  [⏟(,,,,,,…,)┬(n-1 ta) ]massiv_nomi=new tur_nomi [〖i⏟(,j,k,l,m,s,…,)〗┬(n-1 ta) ]<br />
+                                    i, j, k, l ,m, s ... lar sonlar.<br />
+                                    Massivlar bo’yicha ishlashga misollar ko’rib o’tamiz.<br />
+                                    Massiv elementlarini oldindan berish yuqorida ko’rib o’tganimizdek<br />
+                                    double[] massiv = { 1, 2, 3, 4 };<br />
+                                    double[] massiv = new double[] { 1, 2, 3, 4 };<br />
+                                    Agar massiv elementlarini Console oynadan qo’lda kiritmoqchi bo’lsak kod quyidagicha:<br />
+                                    double[]massiv= new double[4];<br />
+                                    //massivning elementlarini takrorlash<br />
+                                    for(int i = 0; i < 4; i++)<br />
+                                    {<br />
+                                    Console.Write(“massiv[{0}]=”, i);<br />
+                                    //massivning elementlarini yuklash<br />
+                                    massiv[i]=Convert.ToDouble(Console.ReadLine());<br />
+                                    }<br />
+                                    Ikki o’lchamli massivni kiritish<br />
+                                    double[,] massiv = new double[,] { { 1, 2 }, { 3, 4 } };<br />
+                                    Massiv elementlarini Console oynadan qo’lda kiritmoqchi bo’lsak<br />
+                                    //ikki o’lchamli massiv e’lon qilish<br />
+                                    double[,] massiv = new double[2,2];<br />
+                                    //massivning qatorlarini takrorlash<br />
+                                    for(int i = 0;i < 2; i++)<br />
+                                    {<br />
+                                    //massivning ustunlarini takrorlash<br />
+                                    for(int j = 0; j < 2; j++)<br />
+                                    {<br />
+                                    Console.Write(“massiv[{0},{1}]=”, i, j);<br />
+                                    //massivning elementlarini yuklash<br />
+                                    massiv[i,j] = Convert.ToDouble(Console.ReadLine());<br />
+                                    }<br />
+                                    }<br />
+
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

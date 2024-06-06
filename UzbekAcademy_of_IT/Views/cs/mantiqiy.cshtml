@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/css/style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <table style="width: 100%">
+        <tr>
+            <th colspan="2" style="font-family:'Times New Roman'">
+                <h1>2-§. C# tilida ifodalar</h1>
+            </th>
+        </tr>
+        <tr>
+            <td style="width:30%; vertical-align: top; padding: 10px;">
+                <div>
+                    @Html.Partial("Menu")
+                </div>
+            </td>
+            <td style="font-family:'Times New Roman'">
+                C# tilida o'zgaruvchi qiymatini birga oshirish va kamaytirishning samarali usullari mavjud. Ular inkrement (++) va dekrement (--) unar amallaridir.<br />
+                Inkrement va dekrement  amallarining  prefiks  va postfiks ko'rinishlari  mavjud.<br />
+                x = y++; // postfiks<br />
+                x = --y; // prefiks<br />
+                sanagich++; // unar amal, "++sanagich;" bilan ekvivalent<br />
+                a--; // unar amal, "--a;" bilan ekvivalent<br />
+                Quyida keltirilgan amallar bir xil vazifani bajaradi:<br />
+                <table>
+                    <tr>
+                        <th>
+                            i++
+                        </th>
+                        <th>
+                            i=i+1
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            i--
+                        </td>
+                        <td>
+                            i=i-1
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            a+=b
+                        </td>
+                        <td>
+                            a=a+b
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            a-=b
+                        </td>
+                        <td>
+                            a=a-b
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            a*=b-c
+                        </td>
+                        <td>
+                            a=a*(b-c)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            ++i
+                        </td>
+                        <td>
+                            i++
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            --c
+                        </td>
+                        <td>
+                            c--
+                        </td>
+                    </tr>
+                </table><br />
+             C# da ifodalar quyidagi tartibda hisoblanadi:<br />
+             1.	Qavs ichidagi ifodalar hisoblanadi<br />
+             2.	Funksiyalar qiymati hisoblanadi. (sin(x), cos(x), sqrt(x) va xakazo)<br />
+             3.	Inkor amali ( ! - not )<br />
+             4.	Bo'lish, ko'paytirish kabi amallar (/,*, %, ...)<br />
+             5.	Qo'shish kabi amallar (+, -, or, xor )<br />
+             6.	Munosabat amallari (=, <>, <,>, <=, >= )<br />
+             <p>Ma`lumotlarning mantiqiy toifalari</p>
+                    Mantiqiy toifa- bool ikki hil qiymat qabul qilishi mumkin: true (rost, 1) va false (yolg`on, 0). Mantiqiy ma`lumotlarni e`lon qilish uchun bool xizmatchi so'zidan foydalaniladi.<br />
+                    bool a, b;<br />
+                    Mantiqiy toifadagi o`zgaruvchilarga qiymat berish quyidagicha amalga oshiriladi:<br />
+                    a = true; // rost<br />
+                    b = 0; // yolg'on, false<br />
+                    Mantiqiy amallar:<br />
+                    ! (inkor qilish) - mantiqiy  operatori mantiqiy ifodalar yoki o`zgaruvchilar oldidan qo`yiladi. Mantiqiy ifoda yoki o`zgaruvchining qiymatini teskarisiga o`zgartiradi.<br />
+
+                    && (Mantiqiy ko`paytirish) - mantiqiy  operatori ikkita mantiqiy  o`zgaruvchini birlashtiradi. Agar ikkala o`zgaruvchi ham rost qiymatga ega bo`lsa  natija  rost,  aks holda yolg`on natija beradi.<br />
+                    || (mantiqiy qo`shish) - mantiqiy operatori ikkita mantiqiy o`zgaruvchini  birlashtiradi. Agar o`zgaruvchilardan kamida bittasi rost qiymatga ega bo`lsa natija rost, aks holda yolg`on natija beradi.<br />
+            <p>! - mantiqiy inkor operatori jadvali</p>
+            <table>
+                <tr>
+                    <th>
+                        x
+                    </th>
+                    <th>
+                        !x
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        False
+                    </td>
+                    <td>
+                        True
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        True
+                    </td>
+                    <td>
+                        False
+                    </td>
+                </tr>
+            </table>
+            <p>&&, || manqiqiy operatorlai jadvali</p>
+            <table>
+                <tr>
+                    <th>
+                        x
+                    </th>
+                    <th>
+                        y
+                    </th>
+                    <th>
+                        x&&y
+                    </th>
+                    <th>
+                        x||y
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        False
+                    </td>
+                    <td>
+                        False
+                    </td>
+                    <td>
+                        False
+                    </td>
+                    <td>
+                        False
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        False
+                    </td>
+                    <td>
+                        True
+                    </td>
+                    <td>
+                        False
+                    </td>
+                    <td>
+                        True
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        True
+                    </td>
+                    <td>
+                        False
+                    </td>
+                    <td>
+                        False
+                    </td>
+                    <td>
+                        True
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        True
+                    </td>
+                    <td>
+                        True
+                    </td>
+                    <td>
+                        True
+                    </td>
+                    <td>
+                        True
+                    </td>
+                </tr>
+            </table><br />
+                    <p>Mantiqiy amallarga misollar</p><br />
+                    a = true; b=false;<br />
+                    c = !a;	//{ c = false }<br />
+                    c = a && b; //{ c = false }<br />
+                    c = a || b; //{ c = true }<br />
+                    <p>Munosabat amallari</p><br />
+                    •	== - teng<br />
+                    •	<= - kichik yoki teng<br />
+                    •	!=  - teng emas<br />
+                    •	>= - katta yoki teng<br />
+                    •	<  - kichik<br />
+                    •	> - katta<br />
+                    <p>Munosabat amallariga misollar</p><br />
+                    a = 6 < 4;	 // a=false<br />
+                    a = ( 9 % 3 == 0 );	// a=true<br />
+                    a = ( b > 0 ) && ( b < 10 );	// a=true, agar 0<b<10 bo`lsa<br />
+
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

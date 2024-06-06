@@ -1,0 +1,242 @@
+﻿@model UzbekAcademy_of_IT.Models.Tekshiruv
+
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input[type=text], input[type=email], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: white;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+            button:hover {
+                opacity: 0.8;
+            }
+
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+            position: relative;
+        }
+
+        img.avatar {
+            width: 40%;
+            border-radius: 50%;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+            background-color: lime;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 0;
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: red;
+                cursor: pointer;
+            }
+
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+
+        h3 {
+            font-family: 'Times New Roman';
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr style="width:100%">
+            <th colspan="3">
+                <h1 style="font-family:'Times New Roman'; text-align:center">
+                    Kelajak avlodlari Universiteti
+                </h1>
+                <h3><marquee style="font-family: 'Harlow Solid'; text-align:center">Dunyoga sharqona nazar bilan!</marquee></h3>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="openModal('id01', 'dasturlash')"><img src="~/rasm/dasturlash.jpg" style="width:300px; height:300px" /></button>
+                <h3>Dasturlash</h3>
+                <div id="id01" class="modal">
+                    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+                    {
+                        <div class="imgcontainer">
+                            <span onclick="closeModal('id01')" class="close" title="Close Modal">&times;</span>
+                            <img src="~/avatar/komp.png" alt="Avatar" class="avatar" />
+                        </div>
+                        <div class="container">
+                            @Html.LabelFor(m => m.Login, "Login:")
+                            @Html.PasswordFor(m => m.Login, new { @placeholder = "Login" })
+                            @Html.LabelFor(m => m.Parol, "Parol:")
+                            @Html.PasswordFor(m => m.Parol, new { @placeholder = "Parol" })
+                            @Html.HiddenFor(m => m.Qiymat, new { @value = "dasturlash" })
+                            <button type="submit">Kirish</button>
+                        </div>
+                    }
+                </div>
+            </td>
+            <td>
+                <button onclick="openModal('id02', 'matematika')"><img src="~/rasm/matematika.jpg" style="width:300px; height:300px" /></button>
+                <h3>Matematika</h3>
+                <div id="id02" class="modal">
+                    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+                    {
+                        <div class="imgcontainer">
+                            <span onclick="closeModal('id02')" class="close" title="Close Modal">&times;</span>
+                            <img src="~/avatar/math.png" alt="Avatar" class="avatar" />
+                        </div>
+                        <div class="container">
+                            @Html.LabelFor(m => m.Login, "Login:")
+                            @Html.PasswordFor(m => m.Login, new { @placeholder = "Login" })
+                            @Html.LabelFor(m => m.Parol, "Parol:")
+                            @Html.PasswordFor(m => m.Parol, new { @placeholder = "Parol" })
+                            @Html.HiddenFor(m => m.Qiymat, new { @value = "matematika" })
+                            <button type="submit">Kirish</button>
+                        </div>
+                    }
+                </div>
+            </td>
+            <td>
+                <button onclick="openModal('id03', 'fizika')"><img src="~/rasm/fizika.jpg" style="width:300px; height:300px" /></button>
+                <h3>Fizika</h3>
+                <div id="id03" class="modal">
+                    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+                    {
+                        <div class="imgcontainer">
+                            <span onclick="closeModal('id03')" class="close" title="Close Modal">&times;</span>
+                            <img src="~/avatar/phsics.png" alt="Avatar" class="avatar" />
+                        </div>
+                        <div class="container">
+                            @Html.LabelFor(m => m.Login, "Login:")
+                            @Html.PasswordFor(m => m.Login, new { @placeholder = "Login" })
+                            @Html.LabelFor(m => m.Parol, "Parol:")
+                            @Html.PasswordFor(m => m.Parol, new { @placeholder = "Parol" })
+                            @Html.HiddenFor(m => m.Qiymat, new { @value = "fizika" })
+                            <button type="submit">Kirish</button>
+                        </div>
+                    }
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="openModal('id04', 'biologiya')"><img src="~/rasm/biologiya.jpg" style="width:300px; height:300px" /></button>
+                <h3>Biologiya</h3>
+                <div id="id04" class="modal">
+                    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+                    {
+                        <div class="imgcontainer">
+                            <span onclick="closeModal('id04')" class="close" title="Close Modal">&times;</span>
+                            <img src="~/avatar/bio.png" alt="Avatar" class="avatar" />
+                        </div>
+                        <div class="container">
+                            @Html.LabelFor(m => m.Login, "Login:")
+                            @Html.PasswordFor(m => m.Login, new { @placeholder = "Login" })
+                            @Html.LabelFor(m => m.Parol, "Parol:")
+                            @Html.PasswordFor(m => m.Parol, new { @placeholder = "Parol" })
+                            @Html.HiddenFor(m => m.Qiymat, new { @value = "biologiya" })
+                            <button type="submit">Kirish</button>
+                        </div>
+                    }
+                </div>
+            </td>
+            <td>
+                <button onclick="openModal('id05', 'kimyo')"><img src="~/rasm/kimyo.jpg" style="width:300px; height:300px" /></button>
+                <h3>Kimyo</h3>
+                <div id="id05" class="modal">
+                    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+                    {
+                        <div class="imgcontainer">
+                            <span onclick="closeModal('id05')" class="close" title="Close Modal">&times;</span>
+                            <img src="~/avatar/chemistry.png" alt="Avatar" class="avatar" />
+                        </div>
+                        <div class="container">
+                            @Html.LabelFor(m => m.Login, "Login:")
+                            @Html.PasswordFor(m => m.Login, new { @placeholder = "Login" })
+                            @Html.LabelFor(m => m.Parol, "Parol:")
+                            @Html.PasswordFor(m => m.Parol, new { @placeholder = "Parol" })
+                            @Html.HiddenFor(m => m.Qiymat, new { @value = "kimyo" })
+                            <button type="submit">Kirish</button>
+                        </div>
+                    }
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+<script>
+    function openModal(modalId, qiymat) {
+        document.getElementById(modalId).style.display = 'block';
+        var hiddenInput = document.querySelector('#' + modalId + ' input[name="Qiymat"]');
+        if (hiddenInput) {
+            hiddenInput.value = qiymat;
+        }
+    }
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = 'none';
+    }
+</script>
+</html>

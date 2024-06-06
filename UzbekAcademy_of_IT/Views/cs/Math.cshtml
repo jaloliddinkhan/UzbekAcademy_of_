@@ -1,0 +1,276 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/css/style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <table style="width: 100%">
+        <tr>
+            <th colspan="2" style="font-family:'Times New Roman'">
+                <h1><p>3-§. Math kutubxonasi</p></h1>
+            </th>
+        </tr>
+        <tr>
+            <td style="width:30%; vertical-align: top; padding: 10px;">
+                <div>
+                    @Html.Partial("Menu")
+                </div>
+            </td>
+            <td style="font-family:'Times New Roman'">
+                Quyida a va b sonlarining yig'indisini chiqaruvchi programma berilgan:<br />
+                <code>
+                    int a, b, c;<br />
+                    Console.Write("a=");<br />
+                    a=Convert.ToInt32(Console.ReadLine());<br />
+                    Console.Write("b=");<br />
+                    b=Convert.ToInt32(Console.ReadLine());<br />
+                    c = a + b;<br />
+                    Console.WriteLine("a+b="+c);<br />
+                    Console.ReadKey();<br />
+                </code>
+                Ba'zi matematik funksiyalar:<br />
+                Matemetik funksiyalardan	programmada foydalanish uchun Math kutubxonasidan foydalaniladi<br />
+                Math.funksiya_nomi();<br />
+                <table>
+                    <tr>
+                        <th>
+                            Funksiyaning C# da ifodalanishi
+                        </th>
+                        <th>
+                            Funksiyaning matematik ifodalanishi
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Abs(x)
+                        </td>
+                        <td>
+                            |x|
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Acos(x)
+                        </td>
+                        <td>
+                            arccos(x)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Acosh(x)
+                        </td>
+                        <td>
+                            arcchx giperbolik arkkosinus
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Asin(x)
+                        </td>
+                        <td>
+                            arcsin(x)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Asinh(x)
+                        </td>
+                        <td>
+                            arcshx giperbolik arksinus
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Atan(x)
+                        </td>
+                        <td>
+                            arctg(x)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Atanh(x)
+                        </td>
+                        <td>
+                            atanh(x) giperbolik arktangens
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Cbrt(x)
+                        </td>
+                        <td>
+                            x<sup>1/3</sup> kub ildiz
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Ceiling(x)
+                        </td>
+                        <td>
+                            haqiqiy toifadagi x o'zgaruvchisi qiymatini unga eng yaqin katta butun songa aylantiradi.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Cos(x)
+                        </td>
+                        <td>
+                            cos(x)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Cosh(x)
+                        </td>
+                        <td>
+                            chx giperbolik kosinus
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            E
+                        </td>
+                        <td>
+                            e=2.7182818284590451
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Exp(x)
+                        </td>
+                        <td>
+                            e<sup>x</sup>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Log(x)
+                        </td>
+                        <td>
+                            ln(x)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Log(a,b)
+                        </td>
+                        <td>
+                            log<sub>b</sub>a
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Log10(x)
+                        </td>
+                        <td>
+                            lg(x)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Log2(x)
+                        </td>
+                        <td>
+                            log<sub>2</sub>x
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Max(a,b)
+                        </td>
+                        <td>
+                            a va b sonlarning kattasini topadi
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Min(a,b)
+                        </td>
+                        <td>
+                            a va b sonlarining kichigini topadi
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            PI
+                        </td>
+                        <td>
+                            π
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Pow(x,y)
+                        </td>
+                        <td>
+                            x<sup>y</sup>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Round(x)
+                        </td>
+                        <td>
+                            x sonini yaxlitlab chiqaradi (2,4≈2;  2,9≈3)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Sin(x)
+                        </td>
+                        <td>
+                            sin(x)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Sinh(x)
+                        </td>
+                        <td>
+                            sh(x) giperbolik sinus
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Sqrt(x)
+                        </td>
+                        <td>
+                            x<sup>1/2</sup> kvadrat ildiz
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Tan(x)
+                        </td>
+                        <td>
+                            tg(x)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Tanh(x)
+                        </td>
+                        <td>
+                            tanh(x) giperbolik tangens
+                        </td>
+                    </tr>
+                </table>
+                Eslatma: Barcha trigonometrik funksiyalar radian o`lchovida beriladi.<br />
+                Matematik funksiyalardan foydalanish<br />
+                <code>
+                //Ishning maqsadi<br />
+                //kiritilgan sonning kvadrat ildizini chiqarish<br />
+                double a;<br />
+                Console.Write("a=");<br />
+                a=Convert.ToDouble(Console.ReadLine());<br />
+                a = Math.Sqrt(a);<br />
+                Console.WriteLine(a);<br />
+                Console.ReadKey();<br />
+                </code>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

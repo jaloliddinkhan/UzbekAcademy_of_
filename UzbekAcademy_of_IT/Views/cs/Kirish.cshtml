@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/css/style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <table style="width: 100%">
+        <tr>
+            <th colspan="2" style="font-family:'Times New Roman'">
+                <h1>1-§. C# dasturlash tili. Consoleda kiritish-chiqarish.</h1>
+            </th>
+        </tr>
+        <tr>
+            <td style="width:30%; vertical-align: top; padding: 10px;">
+                <div>
+                    @Html.Partial("Menu")
+                </div>
+            </td>
+            <td style="font-family:'Times New Roman'">
+                C# algoritmik tilining asosiy tushunchalari<br />
+                C# algoritmik tilining alifbosi quyidagilardan iborat:<br />
+                •	katta va kichik lotin harflari;<br />
+                •	0 dan 9 gacha raqamlar;<br />
+                •	maxsus belgilar  (+,-,*,/,=,>,<,{,},[,],',”,;) ni o'z ichiga oladi.<br />
+                C# tilida so'z deb bir nechta belgilar ketma – ketligi tushuniladi. Xizmatchi so'z deb C# tilidagi standart nom tushuniladi. Bu nom maxsus ma'noni anglatadi va uni ma'lumotlarga berib bo'lmaydi. Masalan: int, double, float, for, while va hokazo.
+                C# tilida ma'lumotlarning elementlari bo'lib o'zgaruvchilar, o'zgarmaslar, izohlar xizmat qiladi.
+                <p>O'zgaruvchi.</p> Xotiraning nomlangan qismi bolib, o'zida ma'lum bir toifadagi qiymatlarni saqlaydi. O'zgaruvchining nomi va qiymati bo'ladi. O'zgaruvchining nomi orqali qiymat saqlanayotgan xotira qismiga murojaat qilinadi. Programma ishlashi jarayonida o'zgaruvchining qiymatini o'zgartirish mumkin. Har qanday o'zgaruvchini ishlatishdan oldin, uni e'lon qilish lozim.
+                Quyida butun sonlardan foydalanish uchun b, haqiqiy sonlardan foydalanish uchun h o'zgaruvchisi e'lon qilingan:<br />
+                <p style="text-align:center">int b;<br />
+                float h;</p>
+                O’zgaruvchini sodda holda tushinish uchun hayotiy misol ko’rib o’tadigan bo’lsak. Atrofingizda insonlar bor. Har birining ismi bor. Siz bu ismlari orqali ularga murojat qilasiz. Bu jarayonda u inson ismlari o’zgaruvchilarga misol bo’ladi va shu ismlari bilan sizning miyangizda saqlanadi va siz shu ismlar orqali ularni taniysiz.
+                O'zgarmaslar (const)
+                Hisoblash jarayonida qiymatini o'zgartirmaydigan kattaliklarga aytiladi.
+                float const pi=3.14;
+                Izohlar. Programmaning ma'lum qismini tavsiflash uchun ishlatiladi va bu qatorda hech qanday amal bajarilmaydi, ya'ni programmaning biror qismini yaxshiroq tushuntirish uchun xizmat qiladi. Izoh "/*" va "*/" simvollari orasida beriladi.
+                <p style="color:green">/* Bu yerga izoh yoziladi. * /</p>
+                Bundan tashqari bir satrli izohlardan ham foydalanish mumkin. Buning uchun izoh boshiga "//" belgisi qo'yiladi.<br />
+                Operator. Tilning yakunlangan jumlasi hisoblanadi va ma'lumolar taxlilining tugallangan bosqichini ifodalaydi. Operatorlar nuqtali vergul “;” bilan ajratiladi. Ya'ni “;” operatorning tugallanganligini bildiradi. C# da operatorlar progammada keltirilgan ketma - ketlikda bajariladi.<br />
+                Identifikator. Dasturchi tomonidan dastur elementlari (funksiya, o'zgaruvchilar, o'zgarmaslar …) uchun ixtiyoriy tanlangan nom.
+                Identifikator tanlaganda quyidagilarga ahamiyat berish kerak:<br />
+                • Identifikator lotin harflaridan boshlanishi shart;<br />
+                • Ikkinchi simvoldan boshlab raqamlardan foydalanish mumkin;<br />
+                • C# da katta kichik harflar farq qiladi. Ya'ni quyidagilarning har biri alohida identifikator hisoblanadi: KATTA, katta, KaTTa, kAttA, Katta, KattA, ...<br />
+                • Probel C# da so'zlarni ajratish uchun ishlatiladi. Shuning uchun identifikatorda probeldan foydalanib bo'lmaydi;<br />
+                • Xizmatchi (int, float, for, while kabi) so'zlardan identifikator sifatida foydalanib bo'lmaydi;<br />
+                C# tilining kalit so'zlariga quyidagilar kiradi:<br />
+                break, case, char, class, const, continue, default, do, while, double, else, enum, float, for, goto, if, int, new, operator, private, protected, public, return, struct, swich, this, try, virtual, void va hk.<br />
+                Protsessor registrlarini belgilash uchun quyidagi so'zlar ishlatiladi:<br />
+                _AH, _AL, _AX, _EAX, _BH, _BL, _BX, _EBX, _CL, _CH, _CX, _ECX, _DH,
+                _DL, _DX, _EDX, _CS, _ESP, _EBP, _FS, _GS, _DI, _EDI, _SI, _ESI, _BP, _SP,_DS, _ES, _SS, _FLAGS.<br />
+                Eslatma. Identifikator tanlashda birinchi belgi sifatida "_" belgisidan foydalanmaslik tavsiya etiladi.<br />
+                C# da oddiy matnni ekranga chiqaruvchi programmani ko'rib chiqamiz<br />
+                <code>
+                1 //Muallif: Xushvaqtov Jaloliddin. Sana 31.12.2023<br />
+                2 // Quyidagi koddan maqsad: Matnni ekranga chiqaruvchi dastur kodi<br />
+                3<br />
+                4<br />
+                5 Console.WriteLine("Assalamu alaykum!");<br />
+                6 Console.ReadKey();<br /></code>
+                Har bir satrni o'rganib chiqamiz:<br />
+                1-2- satrlar izoh hisoblanadi. Malakali dasturchilar har qanday dastur muallif, dasturning tuzilish sanasi va maqsadini ifodalovchi izoh bilan boshlanishini maslahat berishadi.<br />
+                3, 4 - satrlar bo'sh satrlar hisoblanadi. Bosh satrlar programma qismlarini bir - biridan ajratib qo'yish uchun ishlatiladi. Programma qismlarining bir - biridan ajralib turishi, programma o'qilishini osonlashtiradi.<br />
+                "// ekranga ma'lumot chiqarish uchun" yozuvi bir satrli izoh hisoblanadi.<br />
+                5-satrda Console.WriteLine() orqali ma'lumotlar ekranga chiqariladi. Qo'shtirnoq ("_") orasida yozilgan ma'lumotlar satr deyiladi. Qo'shtirnoq orasida nima yozilsa, hech qanday o'zgarishsiz ekranga chiqariladi.<br />
+                6 - satrdagi Console.ReadKey() orqali klaviaturadan biror buyruq yoki belgi kiritilguncha qora oyna to’xtab turadi.<br />
+                O'zgaruvchilarni e'lon qilish. Programmada ishlatilgan barcha o'zgaruvchilarni qaysi toifaga tegishli ekanligini e'lon qilish kerak. Ma'lulotlarni e'lon qilishning umumiy ko'rinishi quyidagicha:<br />
+                toifa_nomi o'zgaruvchi;<br />
+                Agar bir nechta o'zgaruvchi bir toifaga mansub bo'lsa, ularni vergul bilan ajratib berish mumkin.<br />
+                Butun sonlarni ifodalash uchun int va haqiqiy sonlarni ifodalash uchun double xizmatchi so'zlaridan foydalaniladi. Bu ma'ruzada shu 2 tasini bilish bizga kifoya qiladi. Keyingi mavzuda butun va haqiqiy sonlar haqida batafsil gaplashamiz.<br />
+                int x,y; // butun toifadagi o'zgaruvchilarni e'lon qilish<br />
+                double a,b,c; // haqiaiy toifadagi o'zgaruvchilar e'lon qilish<br />
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/D4ZGKPtBNmA?si=eFtDG2SUqfacSU7Z" frameborder="0" allowfullscreen></iframe><br />
+                <a href="https://1drv.ms/b/c/aeae499df00b1473/EXMUC_CdSa4ggK6SAAAAAAABHjDEhYpnGpTm0OlYZr3DDw">Kitob</a><br />
+                Kiritish va chiqarish operatorlari. Ma'lumotlarni kiritish Console.ReadLine();, ma'lumotlarni chiqarish Console.WriteLine(); yoki Console.Write(); operatori orqali amalga oshiriladi.<br />
+                WriteLine va Writening farqi WriteLine o’zi ma’lumotni chop etayotgan qatorida boshqa ma’lumotni chop etishga yoki ma’lumot kiritishga yo’l qo’ymaydi. Write esa bunga teskari. Misol uchun:<br />
+                Console.WriteLine(“Assalamu alaykum!”);<br />
+                Console.Write (“Sana 31.12.2023 ”);<br />
+                Console.WriteLine(“Vaqt 23:08”);<br />
+                Buni qora ekranga chiqarsak quyidagicha natija chiqadi:<br />
+                Assalamu alaykum!<br />
+                Sana 31.12.2023 Vaqt 23:08<br />
+                Console oynadan kiritish<br />
+                double x;<br />
+                x=Convert.ToDouble(Console.ReadLine());<br />
+                Console.WriteLine(x);<br />
+                Console oynasidan kiritilgan ma’lumot turi string ya’ni matn turida bo’ladi uni boshqa turga o’tkazish uchun Convert sinfidan foydalanish kerak bo’ladi. Yuqoridagi kodda Convert.ToDouble orqali string turidagi ma’lumot double turiga o’tkazilgan.<br />
+                Bu operator bajarilganda ekranda kursor paydo bo'ladi. Kerakli ma'lumot klaviatura orqali kiritilgandan so'ng Enter tugmasi bosiladi. Console.WriteLine() orqali ekranga ixtiyoriy ma'lumotni chiqarish mumkin. Satrli ma'lumotlarni ekranga chiqarish uchun, ularni qo'shtirnoq orasida yozish kerak.<br />
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Dm5KatLM_Fo?si=-IFZa9He_hA5_4Cs" frameborder="0" allowfullscreen></iframe><br />
+                Butun va haqiqiy sonlar<br />
+                Dasturchilar doim dastur ishlashi jarayonida xotiradan kamroq joy  talab qilishligi haqida bosh qotirishadi. Bu  muammolar  dasturdagi  o'zgaruvchilar sonini kamaytirish, yoki o'zgaruvchilar saqlanadigan yacheyka  hajmini  kamaytirish  orqali erishiladi.<br />
+                Biz butun va haqiqiy  sonlarni e'lon  qilishni bilamiz.  Bulardan  tashqari C#  da butun va haqiqiy sonlarni e'lon qilish uchun bir nechta toifalar mavjud. Ular bir - biridan kompyuter xotirasida qancha hajm egallashi va qabul qiluvchi qiymatlar oralig'i bilan  farq qiladi.<br />
+                <table>
+                    <tr>
+                        <th>
+                            Tur nomi
+                        </th>
+                        <th>
+                            Minimal qiymati
+                        </th>
+                        <th>
+                            Maksimal qiymati
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            sbyte
+                        </td>
+                        <td>
+                            -128
+                        </td>
+                        <td>
+                            127
+                        </td>
+                    </tr>
+                    <tr>
+                            <td>
+                                byte
+                            </td>
+                            <td>
+                                0
+                            </td>
+                            <td>
+                                255
+                            </td>
+                    </tr>
+                        <tr>
+                            <td>
+                                short
+                            </td>
+                            <td>
+                                -32768
+                            </td>
+                            <td>
+                                32767
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                ushort
+                            </td>
+                            <td>
+                                0
+                            </td>
+                            <td>
+                                65535
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                int
+                            </td>
+                            <td>
+                                -2147483648
+                            </td>
+                            <td>
+                                2147483647
+                            </td>
+                        </tr>
+                    <tr>
+                        <td>
+                                uint
+                        </td>
+                        <td>
+                                0
+                        </td>
+                        <td>
+                                4294967295
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            long
+                        </td>
+                        <td>
+                            -9223372036854775808
+                        </td>
+                        <td>
+                            9223372036854775807
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            ulong
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            18446744073709551615
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            float
+                        </td>
+                        <td>
+                            (+-)1.5*10<sup>-45</sup>
+                        </td>
+                        <td>
+                            (+-)3.4*10<sup>38</sup>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            double
+                        </td>
+                        <td>
+                            (+-)5.0*10<sup>-324</sup>
+                        </td>
+                        <td>
+                            (+-)1.7*10<sup>308</sup>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            decimal
+                        </td>
+                        <td>
+                            (+-)1.0*10<sup>-28</sup>
+                        </td>
+                        <td>
+                            (+-)7.9*10<sup>28</sup>
+                        </td>
+                    </tr>
+                </table><br />
+                Har xil toifadagi o'zgaruvchilar  kompyuter   xotirasida  turli  xajmdagi  baytlarni  egallaydi. Xattoki bir toifadagi o'zgaruvchilar ham qaysi kompyuterda va  qaysi operatsion sistemada ishlashiga qarab turli o'lchamdagi xotirani egallashi mumkin.<br />
+                C# da ixtiyoriy toifadagi o'zgaruvchilarning o'lchamini sizeof funksiyasi orqali aniqlash mumkin. Bu funksiyani o'zgarmasga, biror toifaga va o'zaruvchiga qo'llash mumkin.<br />
+                Toifalarni kompyuter xotirasida egallagam xajmini aniqlash<br />
+                <code>
+                    //Ishning maqsadi<br />
+                    //Toifalarning kompyuter xotirasida egallagan joyini aniqlash<br />
+                    Console.WriteLine("char "+sizeof(char));<br />
+                    Console.WriteLine("bool "+sizeof(bool));<br />
+                    Console.WriteLine("int " + sizeof(int));<br />
+                    Console.WriteLine("long "+sizeof(long));<br />
+                    Console.WriteLine("ulong "+sizeof(ulong));<br />
+                    Console.WriteLine("float "+sizeof(float));<br />
+                    Console.WriteLine("double "+sizeof(double));<br />
+                    Console.ReadKey();<br />
+
+                </code>
+            </td>
+        </tr>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/css/style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <table style="width: 100%">
+        <tr>
+            <th colspan="2" style="font-family:'Times New Roman'">
+                <h1><p>4-§. Shart operatorlari</p></h1>
+            </th>
+        </tr>
+        <tr>
+            <td style="width:30%; vertical-align: top; padding: 10px;">
+                <div>
+                    @Html.Partial("Menu")
+                </div>
+            </td>
+            <td style="font-family:'Times New Roman'">
+                if ... else operatori. if...else- bu shart operatori bo’lib, agar berilgan shart bajarilsa if qismidagi amal, bajarilmasa else qismi amal bajariladi. Yaratadigan dasturimizga parol o’rnatilgan, ushbu parolni to’g’ri yoki xatolikka tekshirish uchun quyidagi koddan foydalansak bo’ladi:<br />
+                <code>
+                //dasturimizga o'rnatgan parolimiz<br />
+                string parol = "kamina0211";<br />
+                //string ya'ni matn turidagi o'zgaruvchi<br />
+                string tekshiruv_paroli;<br />
+                Console.Write("parolni kiriting: ");<br />
+                //foydalanuvchi kiritayotgan parol<br />
+                tekshiruv_paroli=Console.ReadLine();<br />
+                //tekshiruv parolini to'g'rilikka tekshirish<br />
+                if (tekshiruv_paroli==parol)<br />
+                {<br />
+                Console.WriteLine("Parol to'g'ri");<br />
+                }<br />
+                else<br />
+                {<br />
+                Console.WriteLine("Parol noto'g'ri");<br />
+                }<br />
+                Console.ReadKey();<br />
+                </code>
+                Endi esa login va parolni to’g’rilikka tekshirish uchun yuqoridagi kodga qo’shimcha kiritamiz.<br />
+                <code>
+                //dasturimizga o'rnatgan login va parolimiz<br />
+                string parol = "kamina0211";<br />
+                string login = "2002021123";<br />
+                //string ya'ni matn turidagi o'zgaruvchi<br />
+                string tekshiruv_paroli, tekshiruv_logini;<br />
+                Console.Write("parolni kiriting: ");<br />
+                //foydalanuvchi kiritayotgan parol va login<br />
+                tekshiruv_paroli=Console.ReadLine();<br />
+
+                Console.Write("loginni kiriting: ");<br />
+                tekshiruv_logini=Console.ReadLine();<br />
+                //tekshiruv parolini to'g'rilikka tekshirish<br />
+                if (tekshiruv_paroli==parol && tekshiruv_logini==login)<br />
+                {<br />
+                Console.WriteLine("Tekshiruv muvaffaqiyatli!");<br />
+                }<br />
+                else<br />
+                {<br />
+                Console.WriteLine("Login yoki parol noto'g'ri");<br />
+                }<br />
+                Console.ReadKey();<br />
+                </code>
+                if... else operatorini ichma-ich qo’llasa ham bo’ladi.<br />
+                <code>
+                //3 ta sonning kattasini topish<br />
+                int a=4, b=1, c=6;<br />
+                if(a>b)<br />
+                {<br />
+                if (a > c)
+                {<br />
+                Console.WriteLine(a+"-soni");<br />
+                }<br />
+                else{<br />
+                Console.WriteLine(c+"-soni");<br />
+                }<br />
+                }<br />
+                else<br />
+                {<br />
+                if(b>c){<br />
+                Console.WriteLine(b+"-soni");<br />
+                }<br />
+                else {<br />
+                Console.WriteLine(c + "-soni");<br />
+                }<br />
+                }<br />
+                </code>
+                Agarda if blokidagi shart bajarilmasa yana boshqa shartlar bajarish kerak bo’lsa sxema quyidagicha<br />
+                <code>
+                if(shart1)<br />
+                {<br />
+                …<br />
+                }<br />
+                else if(shart2)<br />
+                {<br />
+                …<br />
+                }<br />
+                …<br />
+                else<br />
+                {<br />
+                …<br />
+                }<br />
+                </code>
+                <p><b>Ternar operatori (?:)</b></p><br />
+                Ternar operatori ham shartni tekshirish uchun ishlatiladi. Agar shart bajarilganda true bo’lsa, birinchi qiymatni, aks holda ikkinchi qiymatni qaytaradi. Misol uchun<br />
+                <code>
+                int a = 4, b = 3;<br />
+                int kattason= a>b ? a : b;<br />
+                Console.WriteLine(kattason+"-soni katta");<br />
+                </code>
+                <p><b>switch operatori</b></p><br />
+                Biz yuqorida if... else operatorining bir nechta shart uchun yozilgan sxemasini ko’rib o’tdik. Murakkab shart tekshirilishi bo’lganda if operatoridan ko’ra, uning yangi versiyasi bo’lgan switch dan foydalanish afzal. Switch operatori quyidagicha ishlaydi:<br />
+                Umumniy ko’rinishi quyidagicha<br />
+                <code>
+                switch (tekshiriladigan_shart)<br />
+                {<br />
+                case shart1:<br />
+                {tekshiriladigan_shart==shart1 bo’lganda bajariladigan amal} break;<br />
+                case shart2:<br />
+                {tekshiriladigan_shart==shart2 bo’lganda bajariladigan amal} break;<br />
+                case shart3:<br />
+                {tekshiriladigan_shart==shart3 bo’lganda bajariladigan amal} break;<br />
+                …<br />
+                default: {hech bir shart bajarilmaganda bajariladigan amal}break;<br />
+                    }<br />
+                </code>
+                Misol: Oy raqami berilgan. Kiritilgan oy qaysi faslga tegishli ekanligini chiqaruvchi dastur tuzamiz. (Masalan: 2- oy, “qish”).<br />
+                <code>
+                Console.Write("Oy raqamini kiriting: ");<br />
+                int a=int.Parse(Console.ReadLine());<br />
+                switch (a)<br />
+                {<br />
+                case 12:<br />
+                case 1:<br />
+                case 2: Console.WriteLine("Qish"); break;<br />
+                case 3:<br />
+                case 4:<br />
+                case 5: Console.WriteLine("Bahor"); break;<br />
+                case 6:<br />
+                case 7:<br />
+                case 8: Console.WriteLine("Yoz"); break;<br />
+                case 9:<br />
+                case 10:<br />
+                case 11:Console.WriteLine("Kuz"); break;<br />
+                default: Console.WriteLine("Mavjud bo'lmagan oy"); break;<br />
+                    }<br />
+                </code>
+                break operatoriC# da takrorlanuvchi yoki tarmoqlanuvchi operatorlardan chiqishni ta’minlaydi. Switch operatorida, break so’zi bitta case ni bajarilgandan so’ng, switchdan to’xtaydi. Agar break qo’llanmasa, switch operatori boshqa caselarni tekshirishni davom ettiradi va boshqa bir yoki bir nechta case lar ham bajarilishi mumkin. Bu holat “fall-through” deb ataladi. Lekin ko’p holatlarda, har bir case dan so’ng break qo’llash tavsiya etiladi, shuning uchun faqat bitta case ni bajaradi va switch operatori to’xtaydi. Yana bitta yuqorida e’tibor berishimiz kerak joy int.Parse() biz bundan oldin Convert.ToInt32() dan foydalanar edik. Convert va Parsening farqi shundaki Convert sinfi turlarni bir-biriga o’zgartirish uchun xizmat qiladi, Parse esa ko’plab holatlarda string (matn) turidagi ma’lumotni boshqa turga o’tkazishda ishlatiladi.<br />
+                Misol uchun<br />
+                double n = 3.4;<br />
+                int a=Convert.ToInt32(n);<br />
+                Bu kod double turidagi o’zgaruvchini intga o’tkazishning bir turi, lekin<br />
+                int a = int.Parse(n);<br />
+                ko’rinish xato beradi. Chunki Parse stringdan boshqa turga o’tkazish kerak. Biz bunaqa o’tkazishni quyidagicha amalga oshirishimiz ham mumkin<br />
+                double n = 3.4;<br />
+                int a = (int)n;<br />
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

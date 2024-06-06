@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <link href="~/css/style.css" type="text/css" rel="stylesheet" />
+    </head>
+<body>
+    <table style="width: 100%">
+        <tr>
+            <th colspan="2" style="font-family:'Times New Roman'">
+                <h1><p>7-§. Satrlar bilan ishlash</p></h1>
+            </th>
+        </tr>
+        <tr>
+            <td style="width:30%; vertical-align: top; padding: 10px;">
+                <div>
+                    @Html.Partial("Menu")
+                </div>
+            </td>
+            <td style="font-family:'Times New Roman'">
+                string turi C# dasturlash tilida matn turidagi o’zgaruvchilarni qabul qiladi. Satrli o’zgarmaslarni e’lon qilishda ikkitalik qo’shtirnoqdan foydalaniladi ya’ni<br />
+                string a=”salom”;<br />
+                ko’rinishida bo’ladi. Quyida string funksiyalarni ba’zilari bilan tanishib o’tamiz.<br />
+                <table>
+                    <tr>
+                        <th>
+                            Funksiya nomi
+                        </th>
+                        <th>
+                            Vazifasi
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Clone()
+                        </td>
+                        <td>
+                            Satrni oynaga dastlabki holatida chiqarish
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            CompareTo()
+                        </td>
+                        <td>
+                            Ikki satr solishtiradi va natija sifatida butun qiymat qaytaradi. Izlanayotgan satr mavjud bo’lsa 1 aks holda 0 chiqadi.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Contains()
+                        </td>
+                        <td>
+                            Berilgan satrni izlaydi. Satr mavjud bo’lsa True aks holda False qaytaradi.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            EndsWith()
+                        </td>
+                        <td>
+                            Satr ko’rsatilgan belgi bilan tugasa True aks holda False natija chiqadi.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Equals()
+                        </td>
+                        <td>
+                            Ikkita satrni teng yoki yo’qligini solishtiradi. Teng bo’lsa True aks holda False chiqadi
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            GetHashCode()
+                        </td>
+                        <td>
+                            Satrga Int32 ning maksimal qiymatigacha joy beradi
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            GetType()
+                        </td>
+                        <td>
+                            Satrni qaysi nomlar fazosidan olinganligini ko’rsatadi
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            GetTypeCode()
+                        </td>
+                        <td>
+                            Satrni asl turini qaytaradi
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            IndexOf()
+                        </td>
+                        <td>
+                            Ko’rsatilgan index o’rni bo’yicha belgini chiqaradi
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            ToLower()
+                        </td>
+                        <td>
+                            Satarni kichik harflar ko’rinishida ko’rsatadi
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            ToUpper()
+                        </td>
+                        <td>
+                            Satarni katta harflar ko’rinishida ko’rsatadi
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Insert()
+                        </td>
+                        <td>
+                            Satrga bironta belgi yoki satrni joylashtiradi
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            IsNormalized()
+                        </td>
+                        <td>
+                            Satrni C formasi bo’yicha Unicode kodlarida chiqaradi
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            LastIndexOf()
+                        </td>
+                        <td>
+                            Satrdagi oxirgi belgini chiqaradi
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Length
+                        </td>
+                        <td>
+                            Satr uzunligini chiqaradi
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Remove()
+                        </td>
+                        <td>
+                            Satrdagi belgilarni o’chiradi
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Replace()
+                        </td>
+                        <td>
+                            Satrga belgini joylashtiradi
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Split()
+                        </td>
+                        <td>
+                            Satrni biron belgi bo’yicha chiqaradi
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            StartsWith()
+                        </td>
+                        <td>
+                            Satr ko’rsatilgan belgi bo’yicha boshlansa True aks holda False
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Substring()
+                        </td>
+                        <td>
+                            Satrdan biron qism kesib olish.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            ToCharArray()
+                        </td>
+                        <td>
+                            Satrni char turiga o’tkazish
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Trim()
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
